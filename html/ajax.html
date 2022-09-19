@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Table</title>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3b14ec5cd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="tableFilters">
+        <div class="searchContainer">
+            <form class="d-flex" role="search">
+                <input class="search-input form-control me-2" type="search" placeholder="Search for ingredient..."
+                    data-search aria-label="Search">
+                <button class="search-btn btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <select class="dropDown" name="dishType" id="dishTypeDropdown">
+                <option class="dropDown-content" value="all">Recipe Type</option>
+            </select>
+        </div>
+        <div class="allergiesContainer">
+            <div class="titleDiv">
+                <p class="allergyTitle">Diet & Allergies</p>
+            </div>
+            <div class="alleryTypeDiv" id="alleryTypeDiv">
+            </div>
+        </div>
+        <div id="api-data" class="mainsection">
+            <section class="tableSection">
+                <div class="tableContainer d-flex-row">
+                    <table id="table" class="table table-responsive">
+                        <!-- <thead>
+                            <th>Image</th>
+                            <th>Recipe</th>
+                            <th>Type</th>
+                            <th>Calories</th>
+                            <th>Servings</th>
+                            <th>Diet</th>
+                        </thead> -->
+                        <tbody id="tbody" class="tbodyCard"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Subscribe form -->
+
+            <div class="formdiv d-flex justify-content-center">
+                <form>
+                    <div class="form d-flex justify-content-center">
+                        <h2 class="subscribeHeader">sign up to our newsletter</h2>
+                    </div>
+                    <div class="inputfields d-flex justify-content-center align-middle flex-wrap">
+                        <input type="text" placeholder="first id">
+                        <input type="email" placeholder="your email">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option>select country</option>
+                            <option class="country-options" value="1">France</option>
+                            <option class="country-options" value="2">Germany</option>
+                            <option class="country-options" value="3">Portugal</option>
+                        </select>
+                        <button class="sign-up-btn">sign up</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer -->
+
+            <footer class="text-center text-lg-start bg-white text-muted">
+                <!-- Section: Social media -->
+                <section class="d-flex justify-content-center justify-content- p-4">
+                    <div class="socialIcons justify-content-center">
+                        <a href="" class="me-4 link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="me-4 link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="" class="me-4 link">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="" class="me-4 link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="me-4 link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="" class="me-4 link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+
+                </section>
+
+                <!-- Section: Links  -->
+                <section class="">
+                    <div class="container text-center text-md-start mt-5 border-top">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <!-- Content -->
+                                <h6 class="text fw-bold mb-4">
+                                    <img src="../images/logo.png" alt="" width="60" height="auto">
+                                </h6>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text fw-bold mb-4">
+                                    About us
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text">Angular</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text">React</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text">Vue</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text fw-bold mb-4">
+                                    Useful links
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text">Settings</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text">Orders</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text">Help</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <!-- Links -->
+                                <h6 class="text fw-bold mb-4">Contact</h6>
+                                <p><i class="fas fa-home me-3 text"></i>Erich-Weinert-Straße 145, 10409</p>
+                                <p>
+                                    <i class="fas fa-envelope me-3 text"></i>
+                                    jt.wit2022@startsteps.de
+                                </p>
+                                <p><i class="fas fa-phone me-3 text"></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="d-flex justify-content-center justify-content- p-4 border-top"
+                    style="background-color: transparent">
+                    <p>
+                        © 2022 Copyright:</p>
+                    <p class="email text fw-bold">jt.wit@startsteps.de</p>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- Footer -->
+
+        </div>
+
+
+        <!-- <script src="../js/response2.js"></script> -->
+        <script src="../js/ajax.js"></script>
+        <!-- <script src="../js/ajax.js"></script> -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
