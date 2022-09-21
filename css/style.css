@@ -153,6 +153,34 @@ input {
 .table {
     width: 100%;
     font-size: 14px;
+    padding: 0;
+}
+
+.table> :not(caption)>*>* {
+    padding: 0;
+}
+
+.table> :not(caption)>*>*:hover {
+    transform: scale(1.0);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.table> :not(caption)>*>*:hover .imgDiv {
+    background-color: black;
+}
+
+
+.table> :not(caption)>*>*:hover .imgText {
+    visibility: visible;
+    opacity: 1;
+}
+
+td.card-img-top:hover {
+    opacity: 0.5;
+}
+
+.imgDiv:hover {
+    background-color: black;
 }
 
 .tableContainer {
@@ -164,6 +192,7 @@ input {
 .nav-item {
     color: #862f4c;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .navbar {
@@ -206,6 +235,25 @@ td.card-title {
     padding: 10px;
 }
 
+.imgDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    aspect-ratio: 1, 1;
+    padding: 0;
+    margin: 0;
+}
+
+.imgText {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: underline;
+    visibility: hidden;
+}
+
 td.card-img-top {
     display: flex;
     flex-wrap: wrap;
@@ -221,6 +269,8 @@ td.card-img-top {
 
 .recipeImage {
     max-width: 250px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .seemore {
@@ -292,7 +342,49 @@ td.card-img-top {
     width: 100%;
     padding: 10px;
     background-color: #862f4c5f;
+    border-radius: 5px 5px 0 0;
+}
+
+.clearAllBtnDiv {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    background-color: #862f4c5f;
+    border-radius: 0 0 5px 5px;
+}
+
+.uncheck {
+    background-color: #862f4c;
+    border: none;
+    color: white;
+    padding: 5px;
     border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.uncheck:hover {
+    background-color: #862f4cbd;
+}
+
+.fab:hover {
+    color: #862f4cbd;
+}
+
+.text:hover {
+    color: #862f4cbd;
+}
+
+.mailLink {
+    color: #862f4c;
+}
+
+.mailLink:hover {
+    color: #862f4cbd;
 }
 
 .allergyType {
@@ -350,7 +442,8 @@ td.card-img-top {
     background-color: #862f4c;
     color: white;
     border: none;
-    border-radius: 3px;
-    height: 30px;
+    border-radius: 5px;
+    height: 100%;
     padding: 5px;
+    margin: 0;
 }
